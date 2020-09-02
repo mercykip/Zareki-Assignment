@@ -19,3 +19,8 @@ a. databaseConnection() Fuction
 b.displayInfor()
    This function contains queries to select from three table(student,course,institution) using
    inner joints.
+
+
+
+
+
