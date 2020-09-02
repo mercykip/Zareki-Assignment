@@ -1,4 +1,4 @@
-package java;
+package javas;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,7 +18,7 @@ public class EducationDatabase {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 //Set server Time zone
                 Connection con = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/educationn?useUnicode=true&useJDBCCompliantTimezoneShift=true&serverTimezone=UTCjdbc:mysql://localhost:3306/moneywallet?useUnicode=true&useJDBCCompliantTimezoneShift=true&serverTimezone=UTC",
+                        "jdbc:mysql://localhost:3306/education?useUnicode=true&useJDBCCompliantTimezoneShift=true&serverTimezone=UTCjdbc:mysql://localhost:3306/moneywallet?useUnicode=true&useJDBCCompliantTimezoneShift=true&serverTimezone=UTC",
                         "root",
                         "");
                 System.out.println("successful connection");
@@ -33,7 +33,7 @@ public class EducationDatabase {
 	                ex.printStackTrace();}
             return null;
          
-    }
+             }
     //Creating tables
     public static void createTable() {
     	try
@@ -44,8 +44,7 @@ public class EducationDatabase {
 	    		   		          create= con.prepareStatement(" CREATE TABLE IF NOT EXISTS course(courseId int(11) NOT NULL AUTO_INCREMENT,`name` varchar(250),PRIMARY KEY(courseId), institutionId int ,FOREIGN KEY (institutionId) REFERENCES institution(institutionId) ON DELETE CASCADE)");
 	    		                  create.executeUpdate();
 	    		                  create= con.prepareStatement(" CREATE TABLE IF NOT EXISTS student(studentId int(11) NOT NULL AUTO_INCREMENT,`name` varchar(250),PRIMARY KEY(studentId), courseId int ,FOREIGN KEY (courseId) REFERENCES course(courseId) ON DELETE CASCADE)");
-	    						  create.executeUpdate(); 
-	    		                  
+	    						  create.executeUpdate();     
 	    	}
     	catch(Exception e)
 	    	{
@@ -54,7 +53,7 @@ public class EducationDatabase {
     	//check if table has been created
     	finally {
     		System.out.println("Table created successfully");
-    	}
+    	       }
     
     }
     //SQL Query to display students

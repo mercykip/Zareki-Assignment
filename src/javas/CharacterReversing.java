@@ -1,4 +1,4 @@
-package java;
+package javas;
 
 public class CharacterReversing {
 
@@ -20,9 +20,9 @@ public class CharacterReversing {
 	        {
 	            reverseString =reverseString + myString[i];
 	        }
-        reverseString.split(" ");
+        reverseString.charAt(3);
         System.out.println("reverseString "+reverseString);
-            return reverseString;
+         return reverseString;
 
     }
  public static void main(String[] args) {
