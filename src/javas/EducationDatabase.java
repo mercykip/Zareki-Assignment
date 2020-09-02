@@ -65,6 +65,7 @@ public class EducationDatabase {
         System.out.println("institutionname coursename   numberofstudent"+rs);
     	
     } 
+    
     public static void main(String[] args) throws Exception {
         databaseConnection();
         createTable();

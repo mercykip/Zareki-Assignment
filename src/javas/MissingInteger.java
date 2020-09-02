@@ -11,7 +11,7 @@ public class MissingInteger {
         }
         System.out.println("missing number "+total);
 
-    }
+       }
 	public static void main(String[] args) {
 		 MissingInteger mi=new MissingInteger();
 		 mi.missingInteger();

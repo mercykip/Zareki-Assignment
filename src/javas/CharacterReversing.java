@@ -20,6 +20,7 @@ public class CharacterReversing {
 	        {
 	            reverseString =reverseString + myString[i];
 	        }
+        
         reverseString.charAt(3);
         System.out.println("reverseString "+reverseString);
          return reverseString;
